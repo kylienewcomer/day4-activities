@@ -3,3 +3,44 @@ title: "day4-activities"
 format: html
 ---
 
+```{r}
+library(tidyverse)
+library(skimr)
+library(GGally)
+```
+```{r}
+view(diamonds)
+```
+
+```{r}
+names(diamonds)
+
+dim(diamonds)
+
+summary(diamonds)
+
+head(diamonds)
+
+tail(diamonds)
+```
+
+```{r}
+skimr::skim(diamonds)
+```
+```{r}
+ggpairs(diamonds)
+```
+```{r}
+ggplot(diamonds, aes(carat, price, color=cut))+
+  geom_jitter()
+```
+```{r}
+ggplot(diamonds, aes(x = carat)) +
+  geom_histogram()
+```
+
+```{r}
+ggplot(diamonds, aes(clarity, price)) +
+  geom_boxplot()
+```
+
